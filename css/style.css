@@ -7,6 +7,7 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+
 }
 
 .fa-solid {
@@ -30,6 +31,11 @@ a {
     text-decoration: none;
 }
 
+h3 {
+    font-size:18px;
+    margin:0;
+}
+
 .section-title {
     margin: 0;
     font-size: 22px;
@@ -50,12 +56,162 @@ a {
     font-size: 16px;
 }
 
+.card-subtitle {
+    font-size:14px;
+}
+
 .euro {
     font-weight: 700;
 }
 
 .neutral-star {
     color: var(--main-bg-color)
+}
+/****** Header ***********/
+header {
+    display:flex;
+    justify-content: space-between;
+    gap:10px;
+    height:79px;
+}
+
+header img {
+    padding-top:30px;
+    /* padding-left:50px ; */
+    height:19px;
+    }
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap:68px;
+    padding-right:50px;
+    height:35px;
+    margin-bottom:2.1875rem;
+}
+
+nav div {
+    padding-top:1rem;
+}
+
+nav div:hover {
+    border-top: 2px var(--main-color) solid;
+    color: var(--main-color);
+}
+
+nav a {
+    font-size:1rem;
+}
+
+/****** Formulaire (barre de recherche) ***********/
+.formulaire {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:35px;
+    width:100%;
+}
+
+.formulaire-en-tete h2 {
+    margin-bottom: 8px;  
+}
+
+.formulaire form {
+    display:flex;
+    align-items:center;
+    border :1px solid var(--main-bg-color);
+    border-radius: 15px;
+    height: 49px;
+    overflow: hidden;
+}
+
+form input {
+    font-weight: bold;
+    font-size:18px;
+    border:none;
+}
+
+.icone-barre-recherche {
+    background-color: var(--main-bg-color);
+    height:100%;
+}
+
+.fa-location-dot {
+    color:black;
+    padding:18px 16px 18px 16px;
+}
+
+.champ-barre-recherche input {
+    width:147px;
+    padding-left:24px;
+    padding-right:24px;
+}
+
+.champ-barre-recherche input::placeholder {
+    color:black;
+}
+
+.champ-barre-recherche input:focus {
+    outline: none;
+}
+
+.bouton-barre-recherche {
+    background-color: var(--main-color);
+    display:flex;
+    padding:16px;
+    
+}
+
+.bouton-barre-recherche i{
+    display:none;
+    color:white;
+}
+
+.bouton-barre-recherche input {
+    background-color: transparent;
+    color:white;
+}
+
+/****** Formulaire (filtres) ***********/
+
+.filtres {
+    display:flex;
+    align-items:center;
+    gap:15px; 
+}
+
+.filtres .fa-solid {
+    color: var(--main-color);
+}
+
+.bouton-filtres {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border:2px solid #D9D9D9;
+    border-radius:25px;
+    font-size:17px;
+    height:46px;
+    padding:2px 17px;
+
+}
+
+.bouton-filtres i {
+    font-size:22px;
+}
+
+.bouton-filtres:hover {
+    background-color:#DEEBFF;
+}
+
+.info_nb_dispo i {
+    font-size:10px;
+    border : 1px solid #D9D9D9;
+    border-radius:50px;
+    padding:7px 10px;
+    margin-right:10px;
+    margin-bottom:35px;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -74,6 +230,45 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+.hebergements-cards {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap:30px;
+}
+
+.hebergements-cards img {
+    width: 100%;
+    height: 114px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hebergements-cards .card-content {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+
+.hebergements-cards .card-title {
+    margin-top: 9px;
+    margin-bottom: 8px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0;
+}
+
+.hebergements-cards .card-rating {
+    margin-top:8px;
 }
 
 /****** Populaires ***********/
@@ -111,6 +306,7 @@ a {
 .populaires-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
+
 }
 
 .populaires-cards .card-subtitle {
