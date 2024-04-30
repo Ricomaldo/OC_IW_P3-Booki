@@ -424,8 +424,15 @@ footer {
     }
 }
 
+/* Adaptation pour petites tablettes (tablets, less than 912px) */
+@media (min-width: 768px) and (max-width: 912px) {
+    .activites-cards .card-title {
+        font-size:13px;
+    }
+}
+
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     .main-container {
         padding:0;
     }
@@ -571,3 +578,14 @@ footer {
         gap:15px;
     }
 }    
+
+/* Very small devices (phones, less than 400px) */
+@media (max-width: 400px) {
+    .bouton-filtres {
+        font-size:12px;
+    }
+
+    .bouton-filtres i {
+        font-size:12px;
+    }
+}
